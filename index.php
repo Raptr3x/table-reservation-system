@@ -8,23 +8,23 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="One Page Corporate HTML Template">
     <meta name="author" content="">
-    <link rel="icon" href="front-assets/images/logo-icon.png">
+    <link rel="icon" href="images/logo-icon.png">
 
     <!-- Title -->
     <title>BiteMe - Restaurant HTML Template</title>
 
     <!-- Necessary CSS Files -->
-    <link href="front-assets/css/bootstrap.min.css" rel="stylesheet">            								<!-- Bootstrap CSS Only GRID -->
-    <link rel="stylesheet" href="front-assets/css/google-font.css">              								<!-- Google Font Icon -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">            								<!-- Bootstrap CSS Only GRID -->
+    <link rel="stylesheet" href="css/google-font.css">              								<!-- Google Font Icon -->
     <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">					<!-- Google Font Allura-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">	<!-- Google Font  Montserrat-->
-    <link rel="stylesheet" href="front-assets/css/font-awesome.min.css">         								<!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="front-assets/css/swiper.min.css">               								<!-- Swiper slider -->
-    <link rel="stylesheet" href="front-assets/css/jquery.mb.YTPlayer.min.css">   								<!-- Video background -->
-    <link rel="stylesheet" href="front-assets/css/template.css">                 								<!-- Template CSS -->
-    <link rel="stylesheet" href="front-assets/css/animate.css">													<!-- Wow Animation CSS -->	
-    <link rel="stylesheet" type="text/css" href="front-assets/css/easy-responsive-tabs.css" />					<!-- Tab to accordian CSS -->
-    <link rel="stylesheet" type="text/css" href="front-assets/css/jquery-ui.css" />								<!-- jquery-ui for date picker and time-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">         								<!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="css/swiper.min.css">               								<!-- Swiper slider -->
+    <link rel="stylesheet" href="css/jquery.mb.YTPlayer.min.css">   								<!-- Video background -->
+    <link rel="stylesheet" href="css/template.css">                 								<!-- Template CSS -->
+    <link rel="stylesheet" href="css/animate.css">													<!-- Wow Animation CSS -->	
+    <link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css" />					<!-- Tab to accordian CSS -->
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />								<!-- jquery-ui for date picker and time-->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -102,9 +102,9 @@
                     <!-- Logo -->
                     <div class="site-logo">
                         <!-- Link -->
-                        <a href="index.html">
+                        <a href="/">
                             <!-- Logo Image -->
-                            <img src="front-assets/images/logo-icon.png" alt="Logo">
+                            <img src="images/logo-icon.png" alt="Logo"> 
                         </a>
                     </div>
                     <!-- End logo -->
@@ -121,45 +121,13 @@
                     <nav class="site-nav">
                         <ul>
                             <!-- Active Item (Use the active class) -->
-                            <li class="active"><a href="index.html">Home</a></li>
-                            <li><a href="#aboutus">About us</a></li>
+                            <li><a href="/">Home</a></li>
                             <li><a href="#special-menu">Offer</a></li>
                             <li><a href="#menu">Menu</a></li>
-                            <li><a href="#">Dropdown
-                                <i class="indicator-desktop fa fa-angle-down"></i> </a> <!-- Desktop sub menu indicator icon -->
-                                <i class="indicator-mobile fa fa-angle-down"></i>       <!-- Mobile view sub menu indicator icon -->
-
-                                <!-- Sub menu level 1 -->
-                                <ul class="sub-menu">
-                                    <li><a href="#team">Our Chef</a></li>
-                                    <li><a href="#testimonial">Testimonial</a></li>
-                                    <li><a href="#popularmenu">Popular Dishes</a></li>
-                                    <li><a href="#catering">Cateling</a></li>
-                                    <li><a href="#blog">Events</a></li>
-                                    <li><a href="#">Sub menu item 3
-                                        <i class="indicator-desktop fa fa-angle-right"></i> </a>    <!-- Desktop sub menu indicator icon -->
-                                        <i class="indicator-mobile fa fa-angle-down"></i>    <!-- Mobile view sub menu indicator icon -->
-
-                                        <!-- Sub menu level 2 -->
-                                        <ul class="sub-menu">
-                                            <li><a href="#">Level 2</a></li>
-                                            <li><a href="#">Level 2</a></li>
-                                            <li><a href="#">Level 2</a></li>
-                                            <li><a href="#">Level 2</a></li>
-                                            <li><a href="#">Level 2</a></li>
-                                            <li><a href="#">Level 2</a></li>
-                                            <li><a href="#">Level 2</a></li>
-                                            <li><a href="#">Level 2</a></li>
-                                        </ul>
-
-                                    </li>
-
-                                </ul>
-
-                            </li>
+                            <li><a href="#popularmenu">Popular Dishes</a></li>
                             <li><a href="#gallery">Gallery</a></li>
                             <li><a href="#contactus">Contact</a></li>
-                            <li><a href="#book-table">Book now</a></li>
+                            <li><a href="#book-table" style="color: #deb150;">Book now</a></li>
                         </ul>
                     </nav>
                     <!-- End Navigation -->
@@ -181,7 +149,7 @@
                 <li class="sequence-slide">
 
                     <!-- Background Image -->
-                    <div class="sequence-bg" style="background-image: url(front-assets/images/slider-bg-image-1.jpg)"></div>
+                    <div class="sequence-bg" style="background-image: url(images/slider-bg-image-1.jpg)"></div>
 
                     <!-- Caption -->
                     <div class="sequence-caption">
@@ -207,8 +175,8 @@
                                     <h3>Starting from $29/mp</h3>
                                     <!-- H3 Heading -->
                                     <!-- Button -->
-                                    <a href="#" class="theme-btn">Book Table <i class="fa fa-arrow-right"></i></a>
-                                    <a href="#" class="theme-btn">View Menu <i class="fa fa-arrow-right"></i></a>
+                                    <a href="#book-table" class="theme-btn">Book Table <i class="fa fa-arrow-right"></i></a>
+                                    <a href="#menu" class="theme-btn">View Menu <i class="fa fa-arrow-right"></i></a>
                                     <!-- elements -->
                                     <div class="elements"> </div>
 
@@ -223,7 +191,7 @@
                 <li class="sequence-slide">
 
                     <!-- Background Image -->
-                    <div class="sequence-bg" style="background-image: url(front-assets/images/slider-bg-image-2.jpg)"></div>
+                    <div class="sequence-bg" style="background-image: url(images/slider-bg-image-2.jpg)"></div>
 
                     <!-- Caption -->
                     <div class="sequence-caption">
@@ -249,8 +217,8 @@
                                     <h3>Starting from $29/mp</h3>
                                     <!-- H3 Heading -->
                                     <!-- Button -->
-                                    <a href="#" class="theme-btn">Book Table <i class="fa fa-arrow-right"></i></a>
-                                    <a href="#" class="theme-btn">View Menu <i class="fa fa-arrow-right"></i></a>
+                                    <a href="#book-table" class="theme-btn">Book Table <i class="fa fa-arrow-right"></i></a>
+                                    <a href="#menu" class="theme-btn">View Menu <i class="fa fa-arrow-right"></i></a>
                                     <!-- elements -->
                                     <div class="elements"> </div>
 
@@ -266,7 +234,7 @@
                 <li class="sequence-slide">
 
                     <!-- Background Image -->
-                    <div class="sequence-bg" style="background-image: url(front-assets/images/slider-bg-image-3.jpg)"></div>
+                    <div class="sequence-bg" style="background-image: url(images/slider-bg-image-3.jpg)"></div>
 
                     <!-- Caption -->
                     <div class="sequence-caption">
@@ -292,8 +260,8 @@
                                     <h3>Starting from $29/mp</h3>
                                     <!-- H3 Heading -->
                                     <!-- Button -->
-                                    <a href="#" class="theme-btn">Book Table <i class="fa fa-arrow-right"></i></a>
-                                    <a href="#" class="theme-btn">View Menu <i class="fa fa-arrow-right"></i></a>
+                                    <a href="#book-table" class="theme-btn">Book Table <i class="fa fa-arrow-right"></i></a>
+                                    <a href="#menu" class="theme-btn">View Menu <i class="fa fa-arrow-right"></i></a>
                                     <!-- elements -->
                                     <div class="elements"> </div>
 
@@ -324,13 +292,13 @@
 
     <!-- About us -->
 	<div id="aboutus" class="site-about site-dark-section-a">
-    	<div class="about-element-1 wow fadeInDown" data-wow-duration="2s"> <img src="front-assets/images/about-elements-1.png" alt="about-elements1">
+    	<div class="about-element-1 wow fadeInDown" data-wow-duration="2s"> <img src="images/about-elements-1.png" alt="about-elements1">
         </div>
-		<div class="about-element-2 wow swing" data-wow-duration="8s"> <img src="front-assets/images/about-elements-2.png" alt="about-elements2">
+		<div class="about-element-2 wow swing" data-wow-duration="8s"> <img src="images/about-elements-2.png" alt="about-elements2">
         </div>
-        <div class="about-element-3 wow rotateInDownRight" data-wow-duration="3s"> <img src="front-assets/images/about-elements-3.png" alt="about-elements3">
+        <div class="about-element-3 wow rotateInDownRight" data-wow-duration="3s"> <img src="images/about-elements-3.png" alt="about-elements3">
         </div>
-        <div class="about-element-4 wow zoomIn" data-wow-duration="4s"> <img src="front-assets/images/about-elements-4.png" alt="about-elements4">
+        <div class="about-element-4 wow zoomIn" data-wow-duration="4s"> <img src="images/about-elements-4.png" alt="about-elements4">
         </div>
         <!-- Bootstrap -->
         <div class="container">
@@ -363,7 +331,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                     <!-- BUTTON 1 -->
                                     <a href="#" class="feature-icon">
                                         <!-- FIGURE -->
-                                        <figure> <img src="front-assets/images/feature1.png" alt="feature1"> </figure>
+                                        <figure> <img src="images/feature1.png" alt="feature1"> </figure>
                                         <!-- h5 -->
                                         <h5>Free
                                         delivery</h5>
@@ -372,7 +340,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                     <!-- BUTTON 2 -->
                                     <a href="#" class="feature-icon">
                                         <!-- FIGURE -->
-                                        <figure> <img src="front-assets/images/feature2.png" alt="feature2"> </figure>
+                                        <figure> <img src="images/feature2.png" alt="feature2"> </figure>
                                         <!-- h5 -->
                                         <h5>Freshly Cooked</h5>
                                     </a>
@@ -380,7 +348,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                     <!-- BUTTON 3 -->
                                     <a href="#" class="feature-icon">
                                         <!-- FIGURE -->
-                                        <figure> <img src="front-assets/images/feature3.png" alt="feature3"> </figure>
+                                        <figure> <img src="images/feature3.png" alt="feature3"> </figure>
                                         <!-- h5 -->
                                         <h5>24 hours support</h5>
                                     </a>
@@ -393,7 +361,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                     <!-- Right colom -->
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5">
                     	<div class="right">
-                        	<figure> <img src="front-assets/images/about-chef.png" alt="chef"> </figure>
+                        	<figure> <img src="images/about-chef.png" alt="chef"> </figure>
                         </div>
                     </div>
                     <!-- End Right colom -->
@@ -442,7 +410,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                 <a href="#" class="theme-btn">Order now <i class="fa fa-arrow-right"></i></a>
                                 
                                 <!-- corner icon -->
-                                <figure class="corner-icon"> <img src="front-assets/images/special-menu-icon.png" alt="special-menu-icon">
+                                <figure class="corner-icon"> <img src="images/special-menu-icon.png" alt="special-menu-icon">
                                 </figure>
                                 
                             </div>
@@ -451,15 +419,15 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                     
                     <!-- Image Left -->
                     <div class="col-xs-12 col-sm-12 col-md-4 col-md-pull-4">
-                        <div class="img">
-                        <figure> <img src="front-assets/images/special-menu-img1.jpg" alt="special-menu-img1"> </figure>
+                        <div class="img phone-hidden">
+                        <figure> <img src="images/special-menu-img1.jpg" alt="special-menu-img1"> </figure>
                         </div>
                     </div>
                     
                     <!-- Image Right -->
                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                        <div class="img">
-                        <figure> <img src="front-assets/images/special-menu-img2.jpg" alt="special-menu-img2" > </figure>
+                        <div class="img phone-hidden">
+                        <figure> <img src="images/special-menu-img2.jpg" alt="special-menu-img2" > </figure>
                         </div>
                     </div>
                     
@@ -474,9 +442,9 @@ a type specimen book. It has survived not only five centuries simply dummy text 
     
     <!-- Menu -->
 	<div id="menu" class="site-menu site-dark-section-a">
-    	<div class="menu-element-1 wow rotateInDownLeft" data-wow-duration="2s"> <img src="front-assets/images/menu-element-1.png" alt="menu-element1">
+    	<div class="menu-element-1 wow rotateInDownLeft" data-wow-duration="2s"> <img src="images/menu-element-1.png" alt="menu-element1">
         </div>
-        <div class="menu-element-2 wow rotateInDownRight" data-wow-duration="3s"> <img src="front-assets/images/menu-element-2.png" alt="menu-element2">
+        <div class="menu-element-2 wow rotateInDownRight" data-wow-duration="3s"> <img src="images/menu-element-2.png" alt="menu-element2">
         </div>
 
         <!-- Bootstrap -->
@@ -515,7 +483,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                         <!-- Left Colom -->
                                         <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 ">
                                             <div class="menu-left-colom">
-                                                <figure> <img src="front-assets/images/menu-dish1.jpg" alt="menu-dish1"> </figure>
+                                                <figure> <img src="images/menu-dish1.jpg" alt="menu-dish1"> </figure>
                                             </div>
                                         </div>
                                         
@@ -526,7 +494,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                                 <!-- menu row 1 -->
                                                 <div class="menu-row">
                                                     <!-- image -->
-                                                    <figure> <img src="front-assets/images/dish1.jpg" alt="dish1"> </figure>
+                                                    <figure> <img src="images/dish1.jpg" alt="dish1"> </figure>
                                                     
                                                     <!-- menu row content -->
                                                     <div class="menu-row-inner">
@@ -544,7 +512,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                                 <!-- menu row 2 -->
                                                 <div class="menu-row">
                                                     <!-- image -->
-                                                    <figure> <img src="front-assets/images/dish2.jpg" alt="dish2"> </figure>
+                                                    <figure> <img src="images/dish2.jpg" alt="dish2"> </figure>
                                                     
                                                     <!-- menu row content -->
                                                     <div class="menu-row-inner">
@@ -562,7 +530,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                                 <!-- menu row 3 -->
                                                 <div class="menu-row">
                                                     <!-- image -->
-                                                    <figure> <img src="front-assets/images/dish3.jpg" alt="dish3"> </figure>
+                                                    <figure> <img src="images/dish3.jpg" alt="dish3"> </figure>
                                                     
                                                     <!-- menu row content -->
                                                     <div class="menu-row-inner">
@@ -580,7 +548,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                                 <!-- menu row 4 -->
                                                 <div class="menu-row">
                                                     <!-- image -->
-                                                    <figure> <img src="front-assets/images/dish4.jpg" alt="dish4"> </figure>
+                                                    <figure> <img src="images/dish4.jpg" alt="dish4"> </figure>
                                                     
                                                     <!-- menu row content -->
                                                     <div class="menu-row-inner">
@@ -607,7 +575,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                         <!-- Left Colom -->
                                         <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 ">
                                             <div class="menu-left-colom">
-                                                <figure> <img src="front-assets/images/menu-dish2.jpg" alt="menu-dish2"> </figure>
+                                                <figure> <img src="images/menu-dish2.jpg" alt="menu-dish2"> </figure>
                                             </div>
                                         </div>
                                         
@@ -618,7 +586,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                                 <!-- menu row 1 -->
                                                 <div class="menu-row">
                                                     <!-- image -->
-                                                    <figure> <img src="front-assets/images/dish1.jpg" alt="dish1"> </figure>
+                                                    <figure> <img src="images/dish1.jpg" alt="dish1"> </figure>
                                                     
                                                     <!-- menu row content -->
                                                     <div class="menu-row-inner">
@@ -636,7 +604,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                                 <!-- menu row 2 -->
                                                 <div class="menu-row">
                                                     <!-- image -->
-                                                    <figure> <img src="front-assets/images/dish2.jpg" alt="dish2"> </figure>
+                                                    <figure> <img src="images/dish2.jpg" alt="dish2"> </figure>
                                                     
                                                     <!-- menu row content -->
                                                     <div class="menu-row-inner">
@@ -654,7 +622,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                                 <!-- menu row 3 -->
                                                 <div class="menu-row">
                                                     <!-- image -->
-                                                    <figure> <img src="front-assets/images/dish3.jpg" alt="dish3"> </figure>
+                                                    <figure> <img src="images/dish3.jpg" alt="dish3"> </figure>
                                                     
                                                     <!-- menu row content -->
                                                     <div class="menu-row-inner">
@@ -672,7 +640,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                                 <!-- menu row 4 -->
                                                 <div class="menu-row">
                                                     <!-- image -->
-                                                    <figure> <img src="front-assets/images/dish4.jpg" alt="dish4"> </figure>
+                                                    <figure> <img src="images/dish4.jpg" alt="dish4"> </figure>
                                                     
                                                     <!-- menu row content -->
                                                     <div class="menu-row-inner">
@@ -699,7 +667,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                         <!-- Left Colom -->
                                         <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 ">
                                             <div class="menu-left-colom">
-                                                <figure> <img src="front-assets/images/menu-dish3.jpg" alt="menu-dish3"> </figure>
+                                                <figure> <img src="images/menu-dish3.jpg" alt="menu-dish3"> </figure>
                                             </div>
                                         </div>
                                         
@@ -710,7 +678,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                                 <!-- menu row 1 -->
                                                 <div class="menu-row">
                                                     <!-- image -->
-                                                    <figure> <img src="front-assets/images/dish1.jpg" alt="dish1"> </figure>
+                                                    <figure> <img src="images/dish1.jpg" alt="dish1"> </figure>
                                                     
                                                     <!-- menu row content -->
                                                     <div class="menu-row-inner">
@@ -728,7 +696,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                                 <!-- menu row 2 -->
                                                 <div class="menu-row">
                                                     <!-- image -->
-                                                    <figure> <img src="front-assets/images/dish2.jpg" alt="dish2"> </figure>
+                                                    <figure> <img src="images/dish2.jpg" alt="dish2"> </figure>
                                                     
                                                     <!-- menu row content -->
                                                     <div class="menu-row-inner">
@@ -746,7 +714,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                                 <!-- menu row 3 -->
                                                 <div class="menu-row">
                                                     <!-- image -->
-                                                    <figure> <img src="front-assets/images/dish3.jpg" alt="dish3"> </figure>
+                                                    <figure> <img src="images/dish3.jpg" alt="dish3"> </figure>
                                                     
                                                     <!-- menu row content -->
                                                     <div class="menu-row-inner">
@@ -764,7 +732,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                                 <!-- menu row 4 -->
                                                 <div class="menu-row">
                                                     <!-- image -->
-                                                    <figure> <img src="front-assets/images/dish4.jpg" alt="dish4"> </figure>
+                                                    <figure> <img src="images/dish4.jpg" alt="dish4"> </figure>
                                                     
                                                     <!-- menu row content -->
                                                     <div class="menu-row-inner">
@@ -791,7 +759,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                         <!-- Left Colom -->
                                         <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 ">
                                             <div class="menu-left-colom">
-                                                <figure> <img src="front-assets/images/menu-dish4.jpg" alt="menu-dish4"> </figure>
+                                                <figure> <img src="images/menu-dish4.jpg" alt="menu-dish4"> </figure>
                                             </div>
                                         </div>
                                         
@@ -802,7 +770,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                                 <!-- menu row 1 -->
                                                 <div class="menu-row">
                                                     <!-- image -->
-                                                    <figure> <img src="front-assets/images/dish1.jpg" alt="dish1"> </figure>
+                                                    <figure> <img src="images/dish1.jpg" alt="dish1"> </figure>
                                                     
                                                     <!-- menu row content -->
                                                     <div class="menu-row-inner">
@@ -820,7 +788,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                                 <!-- menu row 2 -->
                                                 <div class="menu-row">
                                                     <!-- image -->
-                                                    <figure> <img src="front-assets/images/dish2.jpg" alt="dish2"> </figure>
+                                                    <figure> <img src="images/dish2.jpg" alt="dish2"> </figure>
                                                     
                                                     <!-- menu row content -->
                                                     <div class="menu-row-inner">
@@ -838,7 +806,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                                 <!-- menu row 3 -->
                                                 <div class="menu-row">
                                                     <!-- image -->
-                                                    <figure> <img src="front-assets/images/dish3.jpg" alt="dish3"> </figure>
+                                                    <figure> <img src="images/dish3.jpg" alt="dish3"> </figure>
                                                     
                                                     <!-- menu row content -->
                                                     <div class="menu-row-inner">
@@ -856,7 +824,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                                 <!-- menu row 4 -->
                                                 <div class="menu-row">
                                                     <!-- image -->
-                                                    <figure> <img src="front-assets/images/dish4.jpg" alt="dish4"> </figure>
+                                                    <figure> <img src="images/dish4.jpg" alt="dish4"> </figure>
                                                     
                                                     <!-- menu row content -->
                                                     <div class="menu-row-inner">
@@ -910,7 +878,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="popularmenu-box" >
                         	<!-- image -->
-                            <figure> <img src="front-assets/images/popular1.jpg" alt="popular dish 1"> </figure>
+                            <figure> <img src="images/popular1.jpg" alt="popular dish 1"> </figure>
                             <div class="content">
                             	<!-- price -->
                             	<h6>$20 </h6>
@@ -923,7 +891,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                         		<a href="#" class="theme-btn">Order Now <i class="fa fa-arrow-right"> </i> </a>
 							</div>
                             <!-- corner image -->
-                            <div class="corner-icon"> <img src="front-assets/images/popular-icon1.png" alt="popular icon 1"> </div>
+                            <div class="corner-icon"> <img src="images/popular-icon1.png" alt="popular icon 1"> </div>
 						</div>
 					</div>
                     
@@ -931,7 +899,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="popularmenu-box">
                         	<!-- image -->
-                            <figure> <img src="front-assets/images/popular2.jpg" alt="popular dish 1"> </figure>
+                            <figure> <img src="images/popular2.jpg" alt="popular dish 1"> </figure>
                             <div class="content">
                             	<!-- price -->
                             	<h6>$49 </h6>
@@ -943,7 +911,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                 <!-- Button -->
                         		<a href="#" class="theme-btn">Order Now <i class="fa fa-arrow-right"> </i> </a>
                                 <!-- corner image -->
-                            <div class="corner-icon"> <img src="front-assets/images/popular-icon2.png" alt="popular icon 1"> </div>
+                            <div class="corner-icon"> <img src="images/popular-icon2.png" alt="popular icon 1"> </div>
 							</div>
 						</div>
 					</div>
@@ -952,7 +920,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="popularmenu-box" >
                         	<!-- image -->
-                            <figure> <img src="front-assets/images/popular3.jpg" alt="popular dish 1"> </figure>
+                            <figure> <img src="images/popular3.jpg" alt="popular dish 1"> </figure>
                             <div class="content">
                             	<!-- price -->
                             	<h6>$33 </h6>
@@ -964,7 +932,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                 <!-- Button -->
                         		<a href="#" class="theme-btn">Order Now <i class="fa fa-arrow-right"> </i> </a>
                                 <!-- corner image -->
-                            <div class="corner-icon"> <img src="front-assets/images/popular-icon3.png" alt="popular icon 1"> </div>
+                            <div class="corner-icon"> <img src="images/popular-icon3.png" alt="popular icon 1"> </div>
 							</div>
 						</div>
 					</div>
@@ -980,9 +948,9 @@ a type specimen book. It has survived not only five centuries simply dummy text 
     
     <!-- Book Table -->
     <div id="book-table" class="site-book-table site-dark-section-a">
-    	<div class="book-table-element-1 wow swing" data-wow-duration="8s"> <img src="front-assets/images/book-table-element-1.png" alt="book-table-element1">
+    	<div class="book-table-element-1 wow swing" data-wow-duration="8s"> <img src="images/book-table-element-1.png" alt="book-table-element1">
         </div>
-        <div class="book-table-element-2 wow slideInRight" data-wow-duration="3s"> <img src="front-assets/images/book-table-element-2.png" alt="book-table-element2">
+        <div class="book-table-element-2 wow slideInRight" data-wow-duration="3s"> <img src="images/book-table-element-2.png" alt="book-table-element2">
         </div>
 
         <!-- Bootstrap -->
@@ -1048,13 +1016,14 @@ a type specimen book. It has survived not only five centuries simply dummy text 
     </div>
     <!-- End Book Table -->
     
-    <!-- Team -->
-    <div id="team" class="site-team site-dark-section-a" >
-    	<div class="team-element-1 wow swing" data-wow-duration="8s"> <img src="front-assets/images/team-element-1.png" alt="team-element1">
+    <!-- Team 
+        ok ovo je glupo ali ovaj blok kad obrisem, prestane da radi delicious menu bukv je skroz random tkd sam samo stavio display:none umesto da brisem -->
+    <div id="team" class="site-team site-dark-section-a" style="display: none;">
+    	<div class="team-element-1 wow swing" data-wow-duration="8s"> <img src="images/team-element-1.png" alt="team-element1">
         </div>
-        <div class="team-element-2 wow swing" data-wow-duration="6s"> <img src="front-assets/images/team-element-2.png" alt="team-element2">
+        <div class="team-element-2 wow swing" data-wow-duration="6s"> <img src="images/team-element-2.png" alt="team-element2">
         </div>
-        <div class="team-element-3 wow fadeInRight" data-wow-duration="2s"> <img src="front-assets/images/team-element-3.png" alt="team-element3">
+        <div class="team-element-3 wow fadeInRight" data-wow-duration="2s"> <img src="images/team-element-3.png" alt="team-element3">
         </div>
 
         <!-- Bootstrap -->
@@ -1083,7 +1052,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-5">
                                         <!-- Image -->
-                                        <figure><img src="front-assets/images/team-1.png" alt="User"></figure>
+                                        <figure><img src="images/team-1.png" alt="User"></figure>
                                     </div>
                                     <div class="col-xs-12 col-sm-7">
                                         <!-- Title -->
@@ -1117,7 +1086,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-5">
                                         <!-- Image -->
-                                        <figure><img src="front-assets/images/team-2.png" alt="User"></figure>
+                                        <figure><img src="images/team-2.png" alt="User"></figure>
                                     </div>
                                     <div class="col-xs-12 col-sm-7">
                                         <!-- Title -->
@@ -1151,7 +1120,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-5">
                                         <!-- Image -->
-                                        <figure><img src="front-assets/images/team-3.png" alt="User"></figure>
+                                        <figure><img src="images/team-3.png" alt="User"></figure>
                                     </div>
                                     <div class="col-xs-12 col-sm-7">
                                         <!-- Title -->
@@ -1186,7 +1155,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-5">
                                         <!-- Image -->
-                                        <figure><img src="front-assets/images/team-1.png" alt="User"></figure>
+                                        <figure><img src="images/team-1.png" alt="User"></figure>
                                     </div>
                                     <div class="col-xs-12 col-sm-7">
                                         <!-- Title -->
@@ -1220,7 +1189,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-5">
                                         <!-- Image -->
-                                        <figure><img src="front-assets/images/team-2.png" alt="User"></figure>
+                                        <figure><img src="images/team-2.png" alt="User"></figure>
                                     </div>
                                     <div class="col-xs-12 col-sm-7">
                                         <!-- Title -->
@@ -1255,7 +1224,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-5">
                                         <!-- Image -->
-                                        <figure><img src="front-assets/images/team-3.png" alt="User"></figure>
+                                        <figure><img src="images/team-3.png" alt="User"></figure>
                                     </div>
                                     <div class="col-xs-12 col-sm-7">
                                         <!-- Title -->
@@ -1295,12 +1264,12 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                     <!-- Thumbnail -->
                     <div class="swiper-container thumbnail" id="team-thumbnails">
                         <ul class="swiper-wrapper">
-                            <li class="swiper-slide" style="background-image:url(front-assets/images/team-thumb-1.png)"></li>
-                            <li class="swiper-slide" style="background-image:url(front-assets/images/team-thumb-2.png)"></li>
-                            <li class="swiper-slide" style="background-image:url(front-assets/images/team-thumb-3.png)"></li>
-                            <li class="swiper-slide" style="background-image:url(front-assets/images/team-thumb-1.png)"></li>
-                            <li class="swiper-slide" style="background-image:url(front-assets/images/team-thumb-2.png)"></li>
-                            <li class="swiper-slide" style="background-image:url(front-assets/images/team-thumb-3.png)"></li>
+                            <li class="swiper-slide" style="background-image:url(images/team-thumb-1.png)"></li>
+                            <li class="swiper-slide" style="background-image:url(images/team-thumb-2.png)"></li>
+                            <li class="swiper-slide" style="background-image:url(images/team-thumb-3.png)"></li>
+                            <li class="swiper-slide" style="background-image:url(images/team-thumb-1.png)"></li>
+                            <li class="swiper-slide" style="background-image:url(images/team-thumb-2.png)"></li>
+                            <li class="swiper-slide" style="background-image:url(images/team-thumb-3.png)"></li>
                         </ul>
                     </div>
                     <!-- End thumbnail -->
@@ -1326,94 +1295,14 @@ a type specimen book. It has survived not only five centuries simply dummy text 
     </div>
     <!-- End team -->
     
-    <!-- Testimonial -->
-    <div id="testimonial" class="site-testimonial site-dark-section-a">
-
-        <!-- Bootstrap -->
-        <div class="container-fluid wide">
-            <div class="row">
-                <div class="col-xs-12">
-
-                    <div class="site-testimonial-main">
-                    
-                        <!-- H2 Heading -->
-                        <h2>Our customer says</h2>
-                        <!-- H1 Heading -->
-                        <h1>testimonial</h1>
-
-                    <!-- Slider main container -->
-                    <div class="swiper-container" id="testimonial-slider">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-
-                            <!-- Slides -->
-                            <div class="swiper-slide">
-                            	<div class="inner">
-                                    <!-- Image -->
-                                    <figure><img src="front-assets/images/testimonial-user-1.png" alt="User"></figure>
-                                    <!-- Paragraph -->
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typing
-                                        indus try Lorem Ipsum has een the indus try's standard dummy
-                                        text Loremsimply </p>
-                                    <!-- Title -->
-                                    <h5>Devil Shohemark</h5>
-                                    <!-- description -->
-                                    <h6>ECO, Kalanidhi</h6>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                            	<div class="inner">
-                                    <!-- Image -->
-                                    <figure><img src="front-assets/images/testimonial-user-2.png" alt="User"></figure>
-                                    <!-- Paragraph -->
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typing
-                                        indus try Lorem Ipsum has een the indus try's standard dummy
-                                        text Loremsimply </p>
-                                    <!-- Title -->
-                                    <h5>Monster Dustinegre</h5>
-                                    <!-- description -->
-                                    <h6>MD, Envato</h6>
-								</div>
-                            </div>
-                            <div class="swiper-slide">
-                            	<div class="inner">
-                                    <!-- Image -->
-                                    <figure><img src="front-assets/images/testimonial-user-2.png" alt="User"></figure>
-                                    <!-- Paragraph -->
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typing
-                                        indus try Lorem Ipsum has een the indus try's standard dummy
-                                        text Loremsimply </p>
-                                    <!-- Title -->
-                                    <h5>Monster Dustinegre</h5>
-                                    <!-- description -->
-                                    <h6>MD, Envato</h6>
-								</div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-xs-12">
-                    <!-- If we need pagination -->
-                    <div id="testimonial-pagination" class="swiper-pagination"></div>
-                </div>
-				</div>
-            </div>
-        </div>
-        <!-- End bootstrap -->
-
-    </div>
-    <!-- End testimonial -->
 
     <!-- Statistic -->
     <div id="statistic" class="site-statistic site-dark-section-a" >
-    	<div class="stats-element-1 wow fadeInDown" data-wow-duration="2s"> <img src="front-assets/images/stats-elements-1.png" alt="stats-elements1">
+    	<div class="stats-element-1 wow fadeInDown" data-wow-duration="2s"> <img src="images/stats-elements-1.png" alt="stats-elements1">
         </div>
-        <div class="stats-element-2 wow slideInRight" data-wow-duration="3s"> <img src="front-assets/images/stats-elements-2.png" alt="stats-elements2">
+        <div class="stats-element-2 wow slideInRight" data-wow-duration="3s"> <img src="images/stats-elements-2.png" alt="stats-elements2">
         </div>
-        <div class="stats-element-3 wow slideInLeft" data-wow-duration="3s"> <img src="front-assets/images/stats-elements-3.png" alt="stats-elements3">
+        <div class="stats-element-3 wow slideInLeft" data-wow-duration="3s"> <img src="images/stats-elements-3.png" alt="stats-elements3">
         </div>
 
         <!-- Bootstrap -->
@@ -1489,53 +1378,14 @@ a type specimen book. It has survived not only five centuries simply dummy text 
     </div>
     <!-- End Statistic -->
     
-    <!-- Catering -->
-    <div id="catering" class="site-catering site-dark-section-b">
-
-        <!-- Bootstrap -->
-        <div class="container">
-			<div class="row">
-            	<div class="main">
-                    <!-- Content -->
-					<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-                    	<div class="catbox">
-                            <div class="inner">
-                            	<!-- H2 Heading -->
-			                    <h2>For your special day</h2>
-            			    	<!-- H1 Heading -->
-			                    <h1>Catering service</h1>
-
-                                <!-- Text -->
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been theindustry'sstandard dummy text ever since the when anunknown printer took galley.
-                                </p>
-                                
-                                <!-- Button -->
-                                <a href="#" class="theme-btn">Order now <i class="fa fa-arrow-right"></i></a>
-                                
-                                <!-- corner icon -->
-                                <figure class="corner-icon"> <img src="front-assets/images/chef-icon.png" alt="chef-icon">
-                                </figure>
-                                
-                            </div>
-                    	</div>
-					</div>
-                    
-                </div>
-			</div>
-                    
-        </div>
-        <!-- End Bootstrap -->
-
-    </div>
-    <!-- End Catering -->
 	
     <!-- Gallery -->
     <div id="gallery" class="site-portfolio site-dark-section-a">
-    	<div class="gallery-element-1 wow fadeInDown" data-wow-duration="2s"> <img src="front-assets/images/gallery-elements-1.png" alt="gallery-elements1">
+    	<div class="gallery-element-1 wow fadeInDown" data-wow-duration="2s"> <img src="images/gallery-elements-1.png" alt="gallery-elements1">
         </div>
-		<div class="gallery-element-2 wow fadeInDown" data-wow-duration="3s"> <img src="front-assets/images/gallery-elements-2.png" alt="gallery-elements2">
+		<div class="gallery-element-2 wow fadeInDown" data-wow-duration="3s"> <img src="images/gallery-elements-2.png" alt="gallery-elements2">
         </div>
-        <div class="gallery-element-3 wow rotateInDownRight" data-wow-duration="3s"> <img src="front-assets/images/gallery-elements-3.png" alt="gallery-elements3">
+        <div class="gallery-element-3 wow rotateInDownRight" data-wow-duration="3s"> <img src="images/gallery-elements-3.png" alt="gallery-elements3">
         </div>
 
         <!-- Bootstrap -->
@@ -1571,11 +1421,11 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                 <!-- box -->
                                 <div class="site-box">
                                     <!-- Image -->
-                                    <img src="front-assets/images/gallery-images/thumb1.jpg" alt="Image">
+                                    <img src="images/gallery-images/thumb1.jpg" alt="Image">
                                     <!-- Caption -->
                                     <div class="portfolio-caption">
                                         <!-- Light box open click on icon -->
-                                        <a class="venobox" href="front-assets/images/gallery-images/big1.jpg" data-gall="myGallery">
+                                        <a class="venobox" href="images/gallery-images/big1.jpg" data-gall="myGallery">
                                             <i class="fa fa-plus"></i>  <!-- Icon -->
                                         </a>
                                         <h5>Desert</h5>    <!-- heading -->
@@ -1589,11 +1439,11 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                 <!-- box -->
                                 <div class="site-box">
                                     <!-- Image -->
-                                    <img src="front-assets/images/gallery-images/thumb2.jpg" alt="Image">
+                                    <img src="images/gallery-images/thumb2.jpg" alt="Image">
                                     <!-- Caption -->
                                     <div class="portfolio-caption">
                                         <!-- Light box open click on icon -->
-                                        <a class="venobox" href="front-assets/images/gallery-images/big2.jpg" data-gall="myGallery">
+                                        <a class="venobox" href="images/gallery-images/big2.jpg" data-gall="myGallery">
                                             <i class="fa fa-plus"></i>  <!-- Icon -->
                                         </a>
                                         <h5>Breakfast</h5>    <!-- heading -->
@@ -1607,11 +1457,11 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                 <!-- box -->
                                 <div class="site-box">
                                     <!-- Image -->
-                                    <img src="front-assets/images/gallery-images/thumb3.jpg" alt="Image">
+                                    <img src="images/gallery-images/thumb3.jpg" alt="Image">
                                     <!-- Caption -->
                                     <div class="portfolio-caption">
                                         <!-- Light box open click on icon -->
-                                        <a class="venobox" href="front-assets/images/gallery-images/big3.jpg" data-gall="myGallery">
+                                        <a class="venobox" href="images/gallery-images/big3.jpg" data-gall="myGallery">
                                             <i class="fa fa-plus"></i>  <!-- Icon -->
                                         </a>
                                         <h5>Lunch</h5>    <!-- heading -->
@@ -1625,11 +1475,11 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                 <!-- box -->
                                 <div class="site-box">
                                     <!-- Image -->
-                                    <img src="front-assets/images/gallery-images/thumb4.jpg" alt="Image">
+                                    <img src="images/gallery-images/thumb4.jpg" alt="Image">
                                     <!-- Caption -->
                                     <div class="portfolio-caption">
                                         <!-- Light box open click on icon -->
-                                        <a class="venobox" href="front-assets/images/gallery-images/big4.jpg" data-gall="myGallery">
+                                        <a class="venobox" href="images/gallery-images/big4.jpg" data-gall="myGallery">
                                             <i class="fa fa-plus"></i>  <!-- Icon -->
                                         </a>
                                         <h5>Breakfast</h5>    <!-- heading -->
@@ -1643,11 +1493,11 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                 <!-- box -->
                                 <div class="site-box">
                                     <!-- Image -->
-                                    <img src="front-assets/images/gallery-images/thumb5.jpg" alt="Image">
+                                    <img src="images/gallery-images/thumb5.jpg" alt="Image">
                                     <!-- Caption -->
                                     <div class="portfolio-caption">
                                         <!-- Light box open click on icon -->
-                                        <a class="venobox" href="front-assets/images/gallery-images/big5.jpg" data-gall="myGallery">
+                                        <a class="venobox" href="images/gallery-images/big5.jpg" data-gall="myGallery">
                                             <i class="fa fa-plus"></i>  <!-- Icon -->
                                         </a>
                                         <h5>Dinner</h5>    <!-- heading -->
@@ -1661,11 +1511,11 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                 <!-- box -->
                                 <div class="site-box">
                                     <!-- Image -->
-                                    <img src="front-assets/images/gallery-images/thumb6.jpg" alt="Image">
+                                    <img src="images/gallery-images/thumb6.jpg" alt="Image">
                                     <!-- Caption -->
                                     <div class="portfolio-caption">
                                         <!-- Light box open click on icon -->
-                                        <a class="venobox" href="front-assets/images/gallery-images/big6.jpg" data-gall="myGallery">
+                                        <a class="venobox" href="images/gallery-images/big6.jpg" data-gall="myGallery">
                                             <i class="fa fa-plus"></i>  <!-- Icon -->
                                         </a>
                                         <h5>Breakfast</h5>    <!-- heading -->
@@ -1679,11 +1529,11 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                 <!-- box -->
                                 <div class="site-box">
                                     <!-- Image -->
-                                    <img src="front-assets/images/gallery-images/thumb7.jpg" alt="Image">
+                                    <img src="images/gallery-images/thumb7.jpg" alt="Image">
                                     <!-- Caption -->
                                     <div class="portfolio-caption">
                                         <!-- Light box open click on icon -->
-                                        <a class="venobox" href="front-assets/images/gallery-images/big7.jpg" data-gall="myGallery">
+                                        <a class="venobox" href="images/gallery-images/big7.jpg" data-gall="myGallery">
                                             <i class="fa fa-plus"></i>  <!-- Icon -->
                                         </a>
                                         <h5>Breakfast</h5>    <!-- heading -->
@@ -1697,11 +1547,11 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                                 <!-- box -->
                                 <div class="site-box">
                                     <!-- Image -->
-                                    <img src="front-assets/images/gallery-images/thumb8.jpg" alt="Image">
+                                    <img src="images/gallery-images/thumb8.jpg" alt="Image">
                                     <!-- Caption -->
                                     <div class="portfolio-caption">
                                         <!-- Light box open click on icon -->
-                                        <a class="venobox" href="front-assets/images/gallery-images/big8.jpg" data-gall="myGallery">
+                                        <a class="venobox" href="images/gallery-images/big8.jpg" data-gall="myGallery">
                                             <i class="fa fa-plus"></i>  <!-- Icon -->
                                         </a>
                                         <h5>Dinner</h5>    <!-- heading -->
@@ -1724,121 +1574,6 @@ a type specimen book. It has survived not only five centuries simply dummy text 
     </div>
     <!-- End Gallery -->
     
-     <!-- Blog -->
-    <div id="blog" class="site-blog site-dark-section-a">
-
-        <!-- Bootstrap -->
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                	<!-- H2 Heading -->
-                    <h2>Enjoy our</h2>
-                    <!-- H1 Heading -->
-                    <h1>upcoming event</h1>
-                        
-					<div class="site-blog-main">
-                    
-                        <!-- Bootstrap inner columns -->
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-
-                            <!-- blog box -->
-                            <div class="blog-box" >
-                                
-                                <!-- image -->
-                                <figure> <img src="front-assets/images/event-1.jpg" alt="blog-1" >
-                                	<!-- date -->
-                                	<div class="date">26
-                                    apr</div>
-                                </figure>
-                                
-                                <!-- H3 heading -->
-                                <h3><a href="#">New year party with DJ</a></h3>
-                                
-                                <!-- list -->
-                                <ul>
-                                    <li>
-                                    <!-- Font awesome icon -->
-                                    <i class="fa fa-map-marker"></i>
-                                    
-                                    <!-- Text -->
-                                    Foody Restaurant, Est bay 12356
-                                    
-                                    </li>
-                                    
-                                    <li>
-                                    <!-- Font awesome icon -->
-                                    <i class="fa fa-clock-o"></i>
-                                    
-                                    <!-- Text -->
-                                    6PM to 12PM
-                                    
-                                    </li>
-                                    
-                                </ul>
-
-                                <div class="clearfix"> </div>
-                                <!-- Button -->
-                        		<a href="#" class="theme-btn">Book Ticket <i class="fa fa-arrow-right"> </i> </a>
-
-                            </div>
-                            <!-- End box -->
-
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-
-                            <!-- blog box -->
-                            <div class="blog-box" >
-                                
-                                <!-- image -->
-                                <figure> <img src="front-assets/images/event-2.jpg" alt="blog-1" >
-                                	<!-- date -->
-                                	<div class="date">26
-                                    apr</div>
-                                </figure>
-                                
-                                <!-- H3 heading -->
-                                <h3><a href="#">DJ & Dance Party</a></h3>
-                                
-                                <!-- list -->
-                                <ul>
-                                    <li>
-                                    <!-- Font awesome icon -->
-                                    <i class="fa fa-map-marker"></i>
-                                    
-                                    <!-- Text -->
-                                    Foody Restaurant, Est bay 12356
-                                    
-                                    </li>
-                                    
-                                    <li>
-                                    <!-- Font awesome icon -->
-                                    <i class="fa fa-clock-o"></i>
-                                    
-                                    <!-- Text -->
-                                    6PM to 12PM
-                                    
-                                    </li>
-                                    
-                                </ul>
-
-                                <div class="clearfix"> </div>
-                                <!-- Button -->
-                        		<a href="#" class="theme-btn">Book Ticket <i class="fa fa-arrow-right"> </i> </a>
-
-                            </div>
-                            <!-- End box -->
-
-                        </div>
-                        <!-- End Bootstrap inner columns -->
-                        
-					</div>
-                </div>
-            </div>
-        </div>
-        <!-- End Bootstrap -->
-
-    </div>
-    <!-- End Blog -->
     
     <!-- contact us -->
     <div id="contactus" class="site-contact site-dark-section-b">
@@ -1849,9 +1584,9 @@ a type specimen book. It has survived not only five centuries simply dummy text 
 
                 <!-- Contact -->
                 <div class="site-contact-main">
-					<div class="contact-element-1 wow fadeInDown" data-wow-duration="2s"> <img src="front-assets/images/open-sign-animation.gif" alt="open-sign-animation">
+					<div class="contact-element-1 wow fadeInDown" data-wow-duration="2s"> <img src="images/open-sign-animation.gif" alt="open-sign-animation">
 			        </div>
-					<div class="contact-element-2 wow swing" data-wow-duration="8s"> <img src="front-assets/images/contact-elements-2.png" alt="contact-elements2">
+					<div class="contact-element-2 wow swing" data-wow-duration="8s"> <img src="images/contact-elements-2.png" alt="contact-elements2">
 		        	</div>
                     
 					<div class="site-contact-box">
@@ -1922,66 +1657,6 @@ a type specimen book. It has survived not only five centuries simply dummy text 
     </div>
     <!-- End contact us -->
     
-    <!-- Tabs -->
-    <div id="why-us" class="site-tabs site-white-section" style="display:none;">
-
-        <!-- Changeable images -->
-        <div class="site-tab-bg tab-bg-1 active" style="background-image: url(images/tabs-bg.html)"></div>
-        <div class="site-tab-bg tab-bg-2" style="background-image: url(images/tabs-bg-1.html)"></div>
-        <div class="site-tab-bg tab-bg-3" style="background-image: url(images/tabs-bg-2.html)"></div>
-
-        <!-- Bootstrap -->
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-7">
-
-                    <!-- H1 heading -->
-                    <h1>Why <strong>Us only ?</strong></h1>
-
-                    <!-- Tabs wrapper -->
-                    <div class="site-tabs-wrapper" id="site-tabs-1">
-
-                        <!-- Buttons -->
-                        <ul class="site-tabs-buttons">
-                            <li><a data-tab-bg="tab-bg-1" href="#tab-1">Quality</a></li>
-                            <li><a data-tab-bg="tab-bg-2" href="#tab-2">Services</a></li>
-                            <li><a data-tab-bg="tab-bg-3" href="#tab-3">Success</a></li>
-                        </ul>
-
-                        <!-- Tabs content -->   <!-- Tab 1 -->
-                        <div class="site-tabs-content" id="tab-1">
-                            <!-- Paragraph -->
-                            <p>Lorem Ipsum is simply dummy text of therinting and typeseing industry
-                                Lorem sum haseen the industry's standard dummy. text ever since the
-                                when an ing typesei.Lorem Ipsum is simply my text of therinting and
-                                typeseing industry Lorem sum haseen the industry's standard dummy.
-                                text ever since the when an ing typesei.Lorem Ipsum is simply dummy
-                                text of therinting and typeseing industry Lorem sum haseen the
-                                industry's standard dummy. </p>
-                            
-                           
-                        </div>
-
-                        <!-- Tab 2 -->
-                        <div class="site-tabs-content" id="tab-2">
-                            <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
-                        </div>
-
-                        <!-- Tab 3 -->
-                        <div class="site-tabs-content" id="tab-3">
-                            <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-                        </div>
-                    </div>
-                    <!-- End Tabs -->
-
-                </div>
-            </div>
-        </div>
-        <!-- End Bootstrap -->
-
-    </div>
-    <!-- End Tabs -->
-
     <!-- Footer -->
     <footer class="site-footer site-subscribe-main site-dark-section-a">
 
@@ -1989,31 +1664,6 @@ a type specimen book. It has survived not only five centuries simply dummy text 
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
-
-                    <!-- Widget -->
-                    <div class="widget">
-						
-                        <!-- H2 Heading -->
-                    	<h2>Be updated</h2>
-                    	<!-- H1 Heading -->
-                    	<h1>Subscribe us</h1>
-                    
-                        <!-- Paragraph -->
-                        <p>Subscribe to our Newsletter to get first<br>
-
-                            Gift voucher by StartLorem Ipsum is simply dummy
-						</p>
-
-
-
-                        <!-- Subscribe -->
-                        <form method="post" action="#" class="site-subscribe">
-                            <input type="email" placeholder="Enter your email" required="required" name="form_subscribe">
-                            <button type="submit"><i class="fa fa-paper-plane"></i></button>
-                        </form>
-
-                    </div>
-                    <!-- End widget -->
 
                 </div>
                 <div class="clearfix"></div>
@@ -2029,7 +1679,9 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                     
                     <!-- Copyright -->
                     <div class="site-copyright">
-                        <a href="https://www.templateshub.net" target="_blank">Templates Hub</a>
+                        Website developed by: <a href="https://www.wdev-solutions.com" target="_blank">WDEV Solutons</a>
+                        <br>
+                        Designed by: <a href="https://www.templateshub.net" target="_blank">Templates Hub</a>
                     </div>
                 </div>
                 
@@ -2044,40 +1696,40 @@ a type specimen book. It has survived not only five centuries simply dummy text 
 
     <!-- Preloader -->
     <div class="site-preloader">
-        <img src="front-assets/images/loader.gif" alt="loader">
+        <img src="images/loader.gif" alt="loader">
     </div>
 
 </div>
 <!-- End Wrapper -->
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="front-assets/js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-1.12.4.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="front-assets/js/wow.min.js"></script>						<!--Wow animation js -->
-<script src="front-assets/js/scrollspy.js"></script>						<!--Wow animation repeat js -->
+<script src="js/wow.min.js"></script>						<!--Wow animation js -->
+<script src="js/scrollspy.js"></script>						<!--Wow animation repeat js -->
 
-<script src="front-assets/js/jquery.countimator.min.js"></script>        <!-- Counter -->
-<script src="front-assets/js/jquery.sticky.min.js"></script>             <!-- Sticky Header -->
-<script src="front-assets/js/swiper.jquery.min.js"></script>             <!-- Carousel Slider -->
-<script src="front-assets/js/isotope.pkgd.min.js"></script>              <!-- Isotope -->
-<script src="front-assets/js/jquery.tabslet.min.js"></script>            <!-- Tabs -->
-<script src="front-assets/js/tweetie.min.js"></script>                   <!-- Tweets -->
-<script src="front-assets/js/jquery.scrollUp.min.js"></script>           <!-- Scroll up -->
+<script src="js/jquery.countimator.min.js"></script>        <!-- Counter -->
+<script src="js/jquery.sticky.min.js"></script>             <!-- Sticky Header -->
+<script src="js/swiper.jquery.min.js"></script>             <!-- Carousel Slider -->
+<script src="js/isotope.pkgd.min.js"></script>              <!-- Isotope -->
+<script src="js/jquery.tabslet.min.js"></script>            <!-- Tabs -->
+<script src="js/tweetie.min.js"></script>                   <!-- Tweets -->
+<script src="js/jquery.scrollUp.min.js"></script>           <!-- Scroll up -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqv7qQuTFyzA7Pgs9SSAOBIOMLI8iiems"></script>    <!-- Google map -->
-<script src="front-assets/js/imagesloaded.pkgd.min.js"></script>         <!-- Header slider scripts -->
-<script src="front-assets/js/hammer.min.js"></script>
-<script src="front-assets/js/sequence.min.js"></script>
-<script src="front-assets/js/venobox.min.js"></script>                   <!-- Light box -->
-<script src="front-assets/js/jquery.mb.YTPlayer.min.js"></script>        <!-- Video background -->
-<script src="front-assets/js/template.js"></script>                      <!-- Theme Options -->
+<script src="js/imagesloaded.pkgd.min.js"></script>         <!-- Header slider scripts -->
+<script src="js/hammer.min.js"></script>
+<script src="js/sequence.min.js"></script>
+<script src="js/venobox.min.js"></script>                   <!-- Light box -->
+<script src="js/jquery.mb.YTPlayer.min.js"></script>        <!-- Video background -->
+<script src="js/template.js"></script>                      <!-- Theme Options -->
 
-<script src="front-assets/js/retina.js"></script>                      <!-- Retina js -->
-<script src="front-assets/js/retina.min.js"></script>                  <!-- Retina js -->
+<script src="js/retina.js"></script>                      <!-- Retina js -->
+<script src="js/retina.min.js"></script>                  <!-- Retina js -->
 
-<script src="front-assets/js/jquery-ui.js"></script>                  <!-- jquery-ui for date picker and time -->
+<script src="js/jquery-ui.js"></script>                  <!-- jquery-ui for date picker and time -->
 
-<script src="front-assets/js/easyResponsiveTabs.js"></script>			<!-- Tab to accordian -->
+<script src="js/easyResponsiveTabs.js"></script>			<!-- Tab to accordian -->
 	<script>
     $(document).ready(function() {
         //Horizontal Tab

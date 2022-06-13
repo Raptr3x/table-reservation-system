@@ -422,7 +422,7 @@ jQuery(document).ready(function ($) {
             marker = new google.maps.Marker({
                 position: {lat: 44.540, lng: -78.546},  // Center map
                 map     : map,                          // Map selector
-                icon    : "front-assets/images/map-marker.png"       // Custom marker image
+                icon    : "images/map-marker.png"       // Custom marker image
             });
 
             // To add the marker to the map, call setMap();
