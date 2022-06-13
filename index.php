@@ -4,7 +4,6 @@ require_once "./functions.php";
 require_once "./constants.php";
 require_once DATABASE."/db_functions.php";
 
-test
 $conn = create_conn();
 
 $notifications=[];
