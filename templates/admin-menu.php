@@ -2,9 +2,9 @@
     <nav class="navbar flex-nowrap p-0">
         <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
             <!-- Logo For Mobile View -->
-            <a class="navbar-brand navbar-brand-mobile" href="admin.php">
-                <img class="img-fluid w-100" src="public/img/logo-mini.png" alt="Graindashboard">
-            </a>
+            <!-- <a class="navbar-brand navbar-brand-mobile" href="admin.php">
+                <img class="img-fluid w-100" src="img/logo-mini.png" alt="Graindashboard">
+            </a> -->
             <!-- End Logo For Mobile View -->
 
             <!-- Logo For Desktop View -->

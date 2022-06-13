@@ -6,7 +6,7 @@ define("DATABASE", "./database");
 
 define("VERSION", "v1.0.1");
 
-define("ASSETS", "./assets");
+define("ASSETS", ".");
 define("CSS", ASSETS."/css");
 define("JS", ASSETS."/js");
 define("IMGS", ASSETS."/imgs");
