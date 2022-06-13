@@ -1,0 +1,135 @@
+{
+  "id": "09f48d19-c0be-4181-bcf1-01536c2857ac",
+  "version": "2.0",
+  "name": "lunibo",
+  "url": "http://127.0.0.1:553",
+  "tests": [{
+    "id": "38fb13c5-3b05-4dae-bff4-60391132bf07",
+    "name": "reservation_test",
+    "commands": [{
+      "id": "f9012bdf-0fa5-4df6-b5c4-6b8b48e2bcfb",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f6b3a59a-7d02-42b2-86dc-81a36d87aeb6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1400x931",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7204633c-a878-4256-a50f-2e1e43f6a43c",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=div:nth-child(1) > #name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//section[@id='reserve']/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Bogdan"
+    }, {
+      "id": "69afec6d-6e7f-4a2d-8bc9-e4041de85821",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=div:nth-child(2) > #name", "css:finder"],
+        ["xpath=(//input[@id='name'])[2]", "xpath:attributes"],
+        ["xpath=//section[@id='reserve']/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "bogdan.caleta@gmail.com"
+    }, {
+      "id": "d565cc1b-6826-4096-944f-d87089791248",
+      "comment": "",
+      "command": "select",
+      "target": "id=people",
+      "targets": [],
+      "value": "label=5 People"
+    }, {
+      "id": "4fe7c179-8247-48dd-b673-5ede6b015dab",
+      "comment": "",
+      "command": "type",
+      "target": "id=time",
+      "targets": [
+        ["id=time", "id"],
+        ["name=time", "name"],
+        ["css=#time", "css:finder"],
+        ["xpath=//input[@id='time']", "xpath:attributes"],
+        ["xpath=//section[@id='reserve']/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "19:39"
+    }, {
+      "id": "c676f74c-97e4-4d8c-a3d2-eac46684d2fd",
+      "comment": "",
+      "command": "type",
+      "target": "id=date",
+      "targets": [
+        ["id=date", "id"],
+        ["name=date", "name"],
+        ["css=#date", "css:finder"],
+        ["xpath=//input[@id='date']", "xpath:attributes"],
+        ["xpath=//section[@id='reserve']/form/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "2022-07-05"
+    }, {
+      "id": "504a8a5a-3c02-404b-9e87-2455bc5e36d9",
+      "comment": "",
+      "command": "type",
+      "target": "id=number",
+      "targets": [
+        ["id=number", "id"],
+        ["name=number", "name"],
+        ["css=#number", "css:finder"],
+        ["xpath=//input[@id='number']", "xpath:attributes"],
+        ["xpath=//section[@id='reserve']/form/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "068181790350"
+    }, {
+      "id": "a61ace87-2c14-47ca-b6ee-0d241f11e48f",
+      "comment": "",
+      "command": "click",
+      "target": "id=reserve",
+      "targets": [
+        ["id=reserve", "id"],
+        ["css=#reserve", "css:finder"],
+        ["xpath=//section[@id='reserve']", "xpath:attributes"],
+        ["xpath=//section[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c3e67a5-4fb3-47ec-a629-b8b2478e65a0",
+      "comment": "",
+      "command": "click",
+      "target": "css=#submit > #submit",
+      "targets": [
+        ["css=#submit > #submit", "css:finder"],
+        ["xpath=//input[@id='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='submit']/input", "xpath:idRelative"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "319a6554-d177-41cd-bad5-06d20a2ebd63",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["38fb13c5-3b05-4dae-bff4-60391132bf07"]
+  }],
+  "urls": ["http://127.0.0.1:553/"],
+  "plugins": []
+}

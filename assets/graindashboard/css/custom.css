@@ -1,0 +1,12 @@
+#ui-id-1{
+    background-color: aliceblue;    
+}
+
+
+.disabled{
+    background: linear-gradient(178deg, #f3f3f3, #fbfbfb);
+}
+
+.activated>a>span{
+    color: #265df1;
+}
