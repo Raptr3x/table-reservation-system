@@ -2,7 +2,7 @@
 
 global $servername, $username, $password, $dbname;
 
-$dev_env = 'raspberry';
+$dev_env = 'remote';
 
 switch ($dev_env) {
     case 'local':

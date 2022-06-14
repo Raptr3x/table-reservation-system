@@ -1641,7 +1641,7 @@ a type specimen book. It has survived not only five centuries simply dummy text 
                         <!-- Right colom -->
                     	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 no-padding">
                         	<!-- Google map show using API -->
-                            <!-- <div class="site-google-map" id="site-map"></div> -->
+                            <div class="site-google-map" id="site-map"></div>
                         </div>
                             
                     </div>
