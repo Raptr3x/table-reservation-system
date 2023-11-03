@@ -1,12 +1,12 @@
 <?php
-require __DIR__ . '/db_config.php';
+require './db_config.php';
 
 class Database {
-    private $host = DB_HOST;
-    private $username = DB_USER;
-    private $password = DB_PASS;
-    private $database = DB_NAME;
-    private $connection;
+    protected $host = DB_HOST;
+    protected $username = DB_USER;
+    protected $password = DB_PASS;
+    protected $database = DB_NAME;
+    protected $connection;
 
     public function __construct() {
         $this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
@@ -93,7 +93,8 @@ class Database {
 
     private function executeQueryWithBind($query, $values) {
         $stmt = $this->prepareAndBind($query, $values);
-        if ($stmt->execute()) {
+        if ($stmt) {
+            $stmt->execute();
             $stmt->close();
             return true;
         } else {
