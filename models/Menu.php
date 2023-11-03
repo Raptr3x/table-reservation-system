@@ -1,6 +1,6 @@
 <?php
 
-class Reservation
+class Menu
 {
 
     private $database_con;
@@ -12,11 +12,7 @@ class Reservation
 
     public function getMenu()
     {
-        $resp = $this->database_con->select('menu', '*', 'deleted = ?', array('0'));
-        if ($resp) {
-            return $resp[0];
-        }
-        return false;
+        return $this->database_con->select('menu', '*', 'deleted = ?', array('0'));
     }
     
     public function getMenuItem($item_id)
@@ -30,24 +26,15 @@ class Reservation
 
     public function addMenuItem($data)
     {
-        if ($this->database_con->insert('menu', $data)) {
-            return true;
-        }
-        return false;
+        return $this->database_con->insert('menu', $data);
     }
 
     public function deleteMenuItem($item_id){
-        if($this->database_con->updateSingleColumn('menu', 'deleted', '1', 'itemID = ?', array($item_id))) {
-            return true;
-        }
-        return false;
+        return $this->database_con->updateSingleColumn('menu', 'deleted', '1', 'itemID = ?', array($item_id));
     }
 
     public function updateMenuItem($item_id, $data){
-        if($this->database_con->updateMultipleColumns('menu', $data, 'resID = ?', array($item_id))) {
-            return true;
-        }
-        return false;
+        return $this->database_con->updateMultipleColumns('menu', $data, 'resID = ?', array($item_id));
     }
 
 }
