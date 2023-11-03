@@ -1,0 +1,1 @@
+{"version":1,"defects":{"DatabaseTest::testInsert":4,"DatabaseTest::testUpdateSingleColumn":4,"DatabaseTest::testUpdateMultipleColumns":4,"DatabaseTest::testDelete":4},"times":{"DatabaseTest::testInsert":0.004,"DatabaseTest::testUpdateSingleColumn":0,"DatabaseTest::testUpdateMultipleColumns":0,"DatabaseTest::testDelete":0}}

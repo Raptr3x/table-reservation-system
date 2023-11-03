@@ -1,0 +1,30 @@
+#ui-id-1{
+    background-color: aliceblue;    
+}
+
+
+.disabled{
+    background: linear-gradient(178deg, #f3f3f3, #fbfbfb);
+}
+
+.activated>a>span{
+    color: #265df1;
+}
+
+.login-bg{
+    background-color: #202127;
+}
+.login-form-bg{
+    background-color: #464646;
+    border: solid #deb150 0.75px !important;
+}
+.login-form-bg>div>h4, .login-form-bg>div>form>div>label{
+    color: #fff;
+}
+.login-form-bg>div>form>div>input{
+    border: solid #deb150 0.75px !important;
+}
+.btn-info{
+    background-color: #deb150 !important;
+    border: #deb150 !important;
+}
