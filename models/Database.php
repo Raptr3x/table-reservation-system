@@ -1,22 +1,12 @@
 <?php
-
-require __DIR__ . '/db_config.php'; 
+require __DIR__ . '/db_config.php';
 
 class Database {
-
-    // removed since the code will be visible on Github
-    // private $host = "127.0.0.1";
-    // private $username = "root";
-    // private $password = "";
-    // private $database = "table_reservation";
-
     private $host = DB_HOST;
     private $username = DB_USER;
     private $password = DB_PASS;
     private $database = DB_NAME;
-
     private $connection;
-
 
     public function __construct() {
         $this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
@@ -28,170 +18,92 @@ class Database {
 
     public function select($table, $columns = '*', $condition = '', $values = array(), $order = '') {
         $query = "SELECT $columns FROM $table";
-        
+
         if (!empty($condition)) {
             $query .= " WHERE $condition";
         }
 
-        if (!empty($order)){
-            $query .= " ORDER BY ".$order;
+        if (!empty($order)) {
+            $query .= " ORDER BY " . $order;
         }
-    
-        $stmt = $this->connection->prepare($query);
-    
-        if (!$stmt) {
+
+        $stmt = $this->prepareAndBind($query, $values);
+        if ($stmt->execute()) {
+            $result = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+            $stmt->close();
+            return $result;
+        } else {
             return false;
         }
-    
-        // If values are provided, bind parameters
-        if (!empty($values)) {
-            $types = $this->setTypes($values);
-            $stmt->bind_param($types, ...$values);
-        }
-    
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $stmt->close();
-    
-        // Fetch the result into an array
-        $data = array();
-        while ($row = $result->fetch_assoc()) {
-            $data[] = $row;
-        }
-    
-        return $data;
     }
+
     public function insert($table, $data) {
-        // Create arrays for column names and placeholders
         $columns = array_keys($data);
         $placeholders = array_fill(0, count($columns), '?');
-        
-        // Generate the SQL statement
         $sql = "INSERT INTO $table (" . implode(', ', $columns) . ") VALUES (" . implode(', ', $placeholders) . ")";
-        
-        // Prepare the SQL statement
-        $stmt = $this->connection->prepare($sql);
-        
-        if (!$stmt) {
-            echo "Error: " . $this->connection->error; // Return the error message
-            return false;
-        }
-        
-        $types = $this->setTypes($data);
-        
-        // Bind parameters
-        if ($stmt->bind_param($types, ...$values)) {
-            // Execute the query
-            $result = $stmt->execute();
+        $stmt = $this->prepareAndBind($sql, array_values($data));
+        if ($stmt->execute()) {
             $stmt->close();
-            return $result;
+            return true;
         } else {
-            echo "Error: " . $stmt->error; // Return the error message
             return false;
         }
     }
-    
-    
-    
 
     public function updateSingleColumn($table, $column, $value, $condition, $condition_values) {
-        $stmt = $this->connection->prepare("UPDATE $table SET $column = ? WHERE $condition");
-
-        if (!$stmt) {
-            return false; // Error in the prepared statement
-        }
-
-        // Combine $value and $values arrays
-        $bindValues = [$value];
-        $bindValues = array_merge($bindValues, $condition_values);
-
-        $types = $this->setTypes($bindValues);
-        
-        // Bind parameters
-        if ($stmt->bind_param($types, ...$values)) {
-            // Execute the query
-            $result = $stmt->execute();
-            $stmt->close();
-            return $result;
-        } else {
-            echo "Error: " . $stmt->error; // Return the error message
-            return false;
-        }
+        $query = "UPDATE $table SET $column = ? WHERE $condition";
+        $values = array_merge([$value], $condition_values);
+        return $this->executeQueryWithBind($query, $values);
     }
 
     public function updateMultipleColumns($table, $updateData, $whereCondition, $whereValues) {
         $updates = [];
-        $bindValues = [];
-        $setValues = [];
-    
+        $values = [];
+
         foreach ($updateData as $column => $value) {
             $updates[] = "$column = ?";
-            $bindValues[] = $value;
-        }
-    
-        $setValuesStr = implode(", ", $updates);
-    
-        $whereStr = "";
-        if (!empty($whereCondition)) {
-            $whereStr = "WHERE $whereCondition";
-            // Add the values for the WHERE condition to the bindValues array
-            $bindValues = array_merge($bindValues, $whereValues);
-        }
-    
-        $query = "UPDATE $table SET $setValuesStr $whereStr";
-        $stmt = $this->connection->prepare($query);
-    
-        if (!$stmt) {
-            return false; // Error in the prepared statement
+            $values[] = $value;
         }
 
-        $types = $this->setTypes($bindValues);
-        
-        // Bind parameters
-        if ($stmt->bind_param($types, ...$values)) {
-            // Execute the query
-            $result = $stmt->execute();
-            $stmt->close();
-            return $result;
-        } else {
-            echo "Error: " . $stmt->error; // Return the error message
-            return false;
-        }
+        $setValuesStr = implode(", ", $updates);
+        $query = "UPDATE $table SET $setValuesStr WHERE $whereCondition";
+        $values = array_merge($values, $whereValues);
+        return $this->executeQueryWithBind($query, $values);
     }
-    
 
     public function delete($table, $condition, $values) {
-        $stmt = $this->connection->prepare("DELETE FROM $table WHERE $condition");
-
-        if (!$stmt) {
-            return false; // Error in the prepared statement
-        }
-        
-        $types = $this->setTypes($values);
-        
-        // Bind parameters
-        if ($stmt->bind_param($types, ...$values)) {
-            // Execute the query
-            $result = $stmt->execute();
-            $stmt->close();
-            return $result;
-        } else {
-            echo "Error: " . $stmt->error; // Return the error message
-            return false;
-        }
+        $query = "DELETE FROM $table WHERE $condition";
+        return $this->executeQueryWithBind($query, $values);
     }
 
     public function closeConnection() {
         $this->connection->close();
     }
 
+    private function prepareAndBind($query, $values) {
+        $stmt = $this->connection->prepare($query);
+        if ($stmt) {
+            $types = $this->setTypes($values);
+            $stmt->bind_param($types, ...$values);
+            return $stmt;
+        } else {
+            return false;
+        }
+    }
+
+    private function executeQueryWithBind($query, $values) {
+        $stmt = $this->prepareAndBind($query, $values);
+        if ($stmt->execute()) {
+            $stmt->close();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     private function setTypes(array $data) {
-        
-        // Extract values from the $data array
-        $values = array_values($data);
         $types = "";
-        
-        foreach ($values as $value) {
+        foreach ($data as $value) {
             if (is_int($value)) {
                 $types .= 'i'; // 'i' for integer
             } elseif (is_float($value)) {
@@ -200,8 +112,6 @@ class Database {
                 $types .= 's'; // 's' for string (default)
             }
         }
-
         return $types;
     }
 }
-?>
