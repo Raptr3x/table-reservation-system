@@ -1,15 +1,19 @@
 <?php
+
+require __DIR__ . '/db_config.php'; 
+
 class Database {
+
+    // removed since the code will be visible on Github
     // private $host = "127.0.0.1";
     // private $username = "root";
     // private $password = "";
-    // private $database = "lunibo";
-    
-    private $host = "192.168.0.124";
-    private $username = "root";
-    private $password = "nemanjina12";
-    private $database = "lunibo";
-    
+    // private $database = "table_reservation";
+
+    private $host = DB_HOST;
+    private $username = DB_USER;
+    private $password = DB_PASS;
+    private $database = DB_NAME;
 
     private $connection;
 
