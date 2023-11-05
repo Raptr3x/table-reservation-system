@@ -1,26 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Title -->
-    <title>Login | Graindashboard UI Kit</title>
+{% extends "super_base.html.twig" %}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+{% block superbase_content %}
 
-    <!-- Template -->
-    <link rel="stylesheet" href="/assets/graindashboard/css/graindashboard.css">
-  </head>
+<main class="main">
 
-  <body class="">
+    {% block content %}{% endblock %}
 
-    <main class="main">
+</main>
 
-        {% block content %}{% endblock %}
+<script src="/assets/js/pages/login.js"></script>
 
-    </main>
-
-	<script src="/assets/graindashboard/js/graindashboard.js"></script>
-  <script src="/assets/graindashboard/js/graindashboard.vendor.js"></script>
-  </body>
-</html>
+{% endblock %}

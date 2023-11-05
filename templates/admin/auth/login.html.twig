@@ -12,7 +12,7 @@
 						<div class="card">
 							<div class="card-body">
 								<h4 class="card-title">Login</h4>
-								<form action="/admin/login" method="POST">
+								<form>
 									{% if error_text is defined %}
 										<p class="text-danger">{{error_text}}</p>
 									{% endif %}
@@ -60,7 +60,6 @@
 				</div>
 
 			</div>
-
 
 
 {% endblock %}

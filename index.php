@@ -1,7 +1,6 @@
 <?php
 session_start();
 session_regenerate_id();
-// session_destroy();
 
 require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/models/Database.php';
@@ -45,5 +44,6 @@ if (array_key_exists($request_uri, $routes)) {
         'error_404.html.twig',
         ['error_text' => 'Page not found']
     );
-    die();
 }
+
+

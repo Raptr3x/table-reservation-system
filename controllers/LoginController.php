@@ -1,8 +1,13 @@
 <?php
 
-if (isset($_POST["email"]) && isset($_POST["password"])) {
+
+if (isset($_POST['logout']) && $_POST['logout']) {
+    session_destroy();
+    header('Location: /admin/login');
+    exit();
+} else if (isset($_POST["email"]) && isset($_POST["password"])) {
     if ($user->login($_POST["email"], $_POST["password"])) {
-        header("/admin");
+        header("Location: /admin");
         exit();
     } else {
         $_POST = array();
