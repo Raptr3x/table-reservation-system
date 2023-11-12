@@ -33,8 +33,9 @@ $routes = [
 ];
 
 
-// get the current URL
-$request_uri = $_SERVER['REQUEST_URI'];
+
+$request_uri = rtrim($_SERVER['REQUEST_URI'], '/');
+
 // check if the route exists
 if (array_key_exists($request_uri, $routes)) {
     // include the corresponding controller
