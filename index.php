@@ -5,6 +5,8 @@ session_regenerate_id();
 require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/models/Database.php';
 require __DIR__ . '/models/User.php';
+require __DIR__ . '/models/Reservation.php';
+require __DIR__ . '/models/Menu.php';
 
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
@@ -14,6 +16,7 @@ $twig = new Environment($loader);
 
 $database = new Database;
 $user = new User($database);
+$reservation_worker = new Reservation($database);
 
 $controllers_dir = "controllers/";
 
@@ -24,14 +27,12 @@ $routes = [
 
     // Admin panel (private)
     '/admin' => 'AdminHomeController',
-    '/admin/menu-edit' => 'MenuController', 
+    '/admin/menu-edit' => 'MenuController',
     '/admin/new-account' => 'NewAccountController',
     '/admin/login' => 'LoginController',
     '/admin/logout' => 'LoginController',
     '/admin/forgot-password' => 'LoginController',
 ];
-
-
 
 $request_uri = rtrim($_SERVER['REQUEST_URI'], '/');
 

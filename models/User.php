@@ -15,14 +15,14 @@ class User
 
     public function login($email, $password)
     {
-        $login_data = $this->get_login_data($email);
+        $login_data = $this->getLoginData($email);
         $this->user_id = $login_data['userID'];
 
         if ($login_data) {
 
             if (
                 password_verify($_POST['password'], $login_data['password'])
-                && $this->load_user_data_to_session()
+                && $this->loadUserDataToSession()
             ) {
                 return true;
             } else {
@@ -33,7 +33,7 @@ class User
         }
     }
 
-    private function load_user_data_to_session()
+    private function loadUserDataToSession()
     {
         $user_data = $this->database_con->select('users', '*', 'userID = ?', array($this->user_id));
         if ($user_data) {
@@ -43,7 +43,14 @@ class User
         return false;
     }
 
-    private function get_login_data($email)
+    public function isUserLoggedIn(){
+        if(isset($_SESSION['user_data'])){
+            return true;
+        }
+        return false;
+    }
+
+    private function getLoginData($email)
     {
         $resp = $this->database_con->select('users', '*', 'email = ?', array($email));
         if ($resp) {
@@ -52,7 +59,7 @@ class User
         return false;
     }
 
-    private function get_active_status()
+    private function getActiveStatus()
     {
         $resp = $this->database_con->select('users', 'status', 'userID = ?', array($this->user_id));
         if ($resp) {
@@ -62,7 +69,7 @@ class User
     }
 
 
-    public function update_account_data($new_data)
+    public function updateAccountData($new_data)
     {
         return $this->database_con->updateMultipleColumns(
             'users',
@@ -72,7 +79,7 @@ class User
         );
     }
 
-    public function create_new_account()
+    public function createNewAccount()
     {
         return $this->database_con->insert('users', array(
             'name' => $_POST['name'],
