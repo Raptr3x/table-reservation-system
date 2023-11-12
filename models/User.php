@@ -64,19 +64,24 @@ class User
 
     public function update_account_data($new_data)
     {
-        if (
-            $this->database_con->updateMultipleColumns(
-                'users',
-                $new_data,
-                'userID=?',
-                array($this->user_id)
-            )
-        ) {
-            return true;
-        }
-        return false;
+        return $this->database_con->updateMultipleColumns(
+            'users',
+            $new_data,
+            'userID=?',
+            array($this->user_id)
+        );
     }
 
+    public function create_new_account()
+    {
+        return $this->database_con->insert('users', array(
+            'name' => $_POST['name'],
+            'lastname' => $_POST['last_name'],
+            'email' => $_POST['email'],
+            'password' => $_POST['password']
+        )
+        );
+    }
 
 }
 
