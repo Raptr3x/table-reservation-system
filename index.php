@@ -20,13 +20,16 @@ $reservation_worker = new Reservation($database);
 
 $controllers_dir = "controllers/";
 
-$routes = [
+$public_routes = [
     // Landing page (public)
     '/' => 'HomeController',
-    '/edit-reservation' => 'EditReservationController',
+    '/edit-reservation' => 'UserEditReservationController',
+];
 
+$admin_routes = [
     // Admin panel (private)
     '/admin' => 'AdminHomeController',
+    '/admin/reservation-edit' => 'EditReservationController',
     '/admin/menu-edit' => 'MenuController',
     '/admin/new-account' => 'NewAccountController',
     '/admin/login' => 'LoginController',
@@ -34,12 +37,15 @@ $routes = [
     '/admin/forgot-password' => 'LoginController',
 ];
 
-$request_uri = rtrim($_SERVER['REQUEST_URI'], '/');
+$request_uri = preg_replace('/[[:digit:]]/','', $_SERVER['REQUEST_URI']);
+$request_uri = rtrim($request_uri, '/');
 
 // check if the route exists
-if (array_key_exists($request_uri, $routes)) {
+if (array_key_exists($request_uri, $public_routes)) {
     // include the corresponding controller
-    include($controllers_dir . $routes[$request_uri] . '.php');
+    include($controllers_dir . $public_routes[$request_uri] . '.php');
+} else if(array_key_exists($request_uri, $admin_routes) && $user->isUserLoggedIn()) {
+    include($controllers_dir . $admin_routes[$request_uri] . '.php');
 } else {
     http_response_code(404);
     echo $twig->render(
