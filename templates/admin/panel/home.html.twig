@@ -1,7 +1,31 @@
 {% extends "admin_panel_base.html.twig" %}
 
 {% block content %}
-
-<p>test</p>
-
+<div class="mx-3">
+    <h2>Reservations</h2>
+	<div class="table-responsive">
+		<table class="table table-striped" style="white-space:nowrap;">
+			<thead>
+				<tr>
+					<th class="font-weight-semi-bold border-top-0 py-2">#</th>
+					<th class="font-weight-semi-bold border-top-0 py-2">Date and time</th>
+					<th class="font-weight-semi-bold border-top-0 py-2">Customer name</th>
+					<th class="font-weight-semi-bold border-top-0 py-2">Table ID</th>
+					<th class="font-weight-semi-bold border-top-0 py-2">Number of people</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for res in all_reservations %}
+						<tr class="table-row" style="cursor:pointer">
+							<td class="py-3">{{res.resID}}</td>
+							<td class="py-3">{{res.reservationDatetime}}</td>
+							<td class="py-3">{{res.reservationName}}</td>
+							<td class="py-3">{{res.tableID}}</td>
+							<td class="py-3">{{res.numOfPeople}}</td>
+						</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
 {% endblock %}
