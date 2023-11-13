@@ -29,7 +29,7 @@ class Reservation
      */
     public function getAllReservations()
     {
-        return $this->database_con->select('reservations', '*', 'deleted = ?', array('0'));
+        return $this->database_con->select('reservations', '*', 'deleted = ? ORDER BY reservationDateTime ASC', array('0'));
     }
 
     public function addReservation($reservation_id, $data)
