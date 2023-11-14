@@ -11,7 +11,7 @@ if (isset($_POST['logout']) && $_POST['logout']) {
     exit();
 } else if (isset($_POST["email"]) && isset($_POST["password"])) {
     // ajax login request
-    if ($user->login($_POST["email"], $_POST["password"])) {
+    if ($user_worker->login($_POST["email"], $_POST["password"])) {
         // successful login
         echo json_encode(true);
         exit();

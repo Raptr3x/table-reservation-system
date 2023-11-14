@@ -7,6 +7,7 @@ require __DIR__ . '/models/Database.php';
 require __DIR__ . '/models/User.php';
 require __DIR__ . '/models/Reservation.php';
 require __DIR__ . '/models/Menu.php';
+require __DIR__ . '/models/Table.php';
 
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
@@ -14,9 +15,10 @@ use Twig\Loader\FilesystemLoader;
 $loader = new FilesystemLoader(__DIR__ . '/templates');
 $twig = new Environment($loader);
 
-$database = new Database;
-$user = new User($database);
-$reservation_worker = new Reservation($database);
+$database_worker = new Database;
+$user_worker = new User($database_worker);
+$reservation_worker = new Reservation($database_worker);
+$table_worker = new Table($database_worker);
 
 $controllers_dir = "controllers/";
 
@@ -44,7 +46,7 @@ $request_uri = rtrim($request_uri, '/');
 if (array_key_exists($request_uri, $public_routes)) {
     // include the corresponding controller
     include($controllers_dir . $public_routes[$request_uri] . '.php');
-} else if(array_key_exists($request_uri, $admin_routes) && $user->isUserLoggedIn()) {
+} else if(array_key_exists($request_uri, $admin_routes) && $user_worker->isUserLoggedIn()) {
     include($controllers_dir . $admin_routes[$request_uri] . '.php');
 } else {
     http_response_code(404);
