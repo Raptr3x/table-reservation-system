@@ -34,15 +34,10 @@
 								<div class="col-md-6">
 									<div class="form-group">
 										<label for="numOfPeople_{{ reservation.resID }}">Number of People</label>
-										<select class="form-control" id="numOfPeople_{{ reservation.resID }}" value="{{ reservation.numOfPeople }}">
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-										</select>
+										<input type="number" class="form-control" id="numOfPeople_{{ reservation.resID }}" value="{{ reservation.numOfPeople }}" min="1">
 									</div>
 								</div>
+
 							</div>
 							<div class="row">
 								<div class="col-md-6">
@@ -55,15 +50,14 @@
 									<div class="form-group">
 										<label for="tableID_{{ reservation.resID }}">Table ID</label>
 										<select class="form-control" id="tableID_{{ reservation.resID }}" value="{{ reservation.tableID }}">
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
+                                            {% for table in tables %}
+											    <option>{{table.tableID}}</option>
+                                            {% endfor %}
 										</select>
 									</div>
 								</div>
 							</div>
+							<div class="btn btn-primary">Submit</div>
 						</form>
 					</div>
 				</div>
@@ -71,4 +65,5 @@
 			</div>
 		</div>
 	</div>
+    <script src="/assets/js/pages/edit_reservation.js"></script>
 {% endblock %}
