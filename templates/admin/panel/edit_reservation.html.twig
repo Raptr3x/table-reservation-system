@@ -1,0 +1,74 @@
+{% extends "admin_panel_base.html.twig" %}
+
+{% block content %}
+	<div class="mx-3">
+		<h2>Edit Reservation</h2>
+		<div class="row">
+			<div
+				class="col-md-6">
+				<!-- Card -->
+				<div class="card mb-3 mb-md-4">
+					<div class="card-body">
+						<form>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="name_{{ reservation.resID }}">Reservation Name</label>
+										<input type="text" class="form-control" id="name_{{ reservation.resID }}" placeholder="Reservation Name" value="{{ reservation.reservationName }}">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="email_{{ reservation.resID }}">Email address</label>
+										<input type="email" class="form-control" id="email_{{ reservation.resID }}" placeholder="name@example.com" value="{{ reservation.reservationEmail }}">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="phone_{{ reservation.resID }}">Phone</label>
+										<input type="text" class="form-control" id="phone_{{ reservation.resID }}" placeholder="Phone" value="{{ reservation.reservationPhone }}">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="numOfPeople_{{ reservation.resID }}">Number of People</label>
+										<select class="form-control" id="numOfPeople_{{ reservation.resID }}" value="{{ reservation.numOfPeople }}">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="datetime_{{ reservation.resID }}">Reservation Date and Time</label>
+										<input type="datetime-local" class="form-control" id="datetime_{{ reservation.resID }}" value="{{ reservation.reservationDatetime }}">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="tableID_{{ reservation.resID }}">Table ID</label>
+										<select class="form-control" id="tableID_{{ reservation.resID }}" value="{{ reservation.tableID }}">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- End Card -->
+			</div>
+		</div>
+	</div>
+{% endblock %}
